@@ -3,7 +3,11 @@
 /*----------------------------
  colors
 ----------------------------*/
-
+$red: hsl(0, 100%, 74%); 
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%); 
+$gray-blue: hsl(246, 25%, 77%);
 
 /*----------------------------
 typography
@@ -11,6 +15,7 @@ typography
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    font-size: 16px;
     overflow-x: hidden;
 }
 
