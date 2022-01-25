@@ -2,11 +2,14 @@
       layout
  ----------------------------*/
 body {
-
   min-height: 100vh;
   width: 100vw;
   background-color: $red;
   background-image: url(../images/bg-intro-mobile.png);
+
+  @media only screen and (min-width: 1440px) {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
 }
 
 .page-wrapper {
@@ -15,9 +18,15 @@ body {
   margin: 92px auto 68px;
   padding: 0 24px;
   max-width: 500px;
+
+  @media only screen and (min-width: 1440px) {
+    flex-direction: row;
+    margin: 121px auto 121;
+    padding: 0 165px;
+    max-width: 1440px;
+    gap: 45px;
+  }
 }
-
-
 
 /*----------------------------
       info section 
@@ -26,17 +35,33 @@ body {
   text-align: center;
   color: $white;
 
+  @media only screen and (min-width: 1440px) {
+    text-align: left;
+    flex: 1 1 525px;
+    align-self: center;
+  }
+
   &__heading {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -0.29px;
     font-weight: 700;
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 50px;
+      line-height: 55px;
+      letter-spacing: -0.52px;
+    }
   }
 
   &__paragraph {
     line-height: 26px;
-    font-weight: 500px;
+    font-weight: 500;
     margin: 16px 0 64px;
+
+    @media only screen and (min-width: 1440px) {
+      margin: 11px 0 0;
+    }
   }
 }
 
@@ -44,13 +69,15 @@ body {
       form section
 ----------------------------*/
 .form {
+  @media only screen and (min-width: 1440px) {
+    flex: 1 1 540px;
+  }
 
   &__trial {
-    background-color: $blue ;
+    background-color: $blue;
     border-radius: 10px;
-    padding: 18px 66px;
-    box-shadow: 0px 8px 0px rgba(0,0,0,0.15);
-
+    padding: 17px 66px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
   }
 
   &__text {
@@ -59,7 +86,7 @@ body {
     line-height: 26px;
     letter-spacing: 0.27px;
     text-align: center;
-    
+
     span {
       font-weight: 600;
     }
@@ -70,6 +97,10 @@ body {
     border-radius: 10px;
     margin: 24px 0 0;
     padding: 24px;
+
+    @media only screen and (min-width: 1440px) {
+      padding: 40px;
+    }
   }
 
   &__input {
@@ -89,7 +120,7 @@ body {
     background-color: $green;
     width: 100%;
     color: $white;
-    border-radius: 5px ;
+    border-radius: 5px;
     border: none;
     padding: 15px 45px;
     font-size: 15px;
@@ -97,7 +128,7 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
     text-align: center;
-    box-shadow: 0px 4px 0px #38bf81; ;
+    box-shadow: 0px 4px 0px #38bf81;
   }
 
   &__terms {
@@ -106,7 +137,7 @@ body {
     line-height: 21px;
     text-align: center;
     color: $gray-blue;
-    margin: 8px auto 0 ;
+    margin: 8px auto 0;
   }
 
   &__link {
@@ -114,8 +145,4 @@ body {
     color: $red;
     font-weight: 700;
   }
-
-
-
-
 }
