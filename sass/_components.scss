@@ -2,24 +2,28 @@
       layout
  ----------------------------*/
 body {
+
   min-height: 100vh;
   width: 100vw;
   background-color: $red;
   background-image: url(../images/bg-intro-mobile.png);
 }
 
-.intro {
+.page-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 92px 24px 68px;
+  margin: 92px auto 68px;
+  padding: 0 24px;
+  max-width: 500px;
 }
+
+
 
 /*----------------------------
       info section 
 ----------------------------*/
 .info {
   text-align: center;
-  margin: 0 0 64px;
   color: $white;
 
   &__heading {
@@ -39,3 +43,79 @@ body {
 /*----------------------------
       form section
 ----------------------------*/
+.form {
+
+  &__trial {
+    background-color: $blue ;
+    border-radius: 10px;
+    padding: 18px 66px;
+    box-shadow: 0px 8px 0px rgba(0,0,0,0.15);
+
+  }
+
+  &__text {
+    color: $white;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.27px;
+    text-align: center;
+    
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__form-container {
+    background-color: $white;
+    border-radius: 10px;
+    margin: 24px 0 0;
+    padding: 24px;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid hsla(0, 0%, 87%, 1);
+    color: $dark-blue;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 0 0 16px;
+    padding: 14px 20px;
+  }
+
+  &__button {
+    background-color: $green;
+    width: 100%;
+    color: $white;
+    border-radius: 5px ;
+    border: none;
+    padding: 15px 45px;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    box-shadow: 0px 4px 0px #38bf81; ;
+  }
+
+  &__terms {
+    max-width: 249px;
+    font-size: 11px;
+    line-height: 21px;
+    text-align: center;
+    color: $gray-blue;
+    margin: 8px auto 0 ;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $red;
+    font-weight: 700;
+  }
+
+
+
+
+}
