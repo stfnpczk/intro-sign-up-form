@@ -103,6 +103,43 @@ body {
     }
   }
 
+
+  &__input-container {
+    position: relative;
+  }
+
+  &__input-container.error input {
+    border-color: $red;
+    // margin: 0 0 19px;
+    color: $red;
+  }
+  
+  &__input-container &__error-message {
+    display: none;
+    text-align: right;
+    font-size: 11px;
+    line-height: 16.5px;
+    font-weight: 500;
+    color: $red;
+    margin: 0 0 19px;
+  }
+    
+  &__input-container.error &__error-message {
+    display: block;
+  }
+  
+  &__input-container &__error-icon {
+    display: none;
+  }
+  
+  &__input-container.error  &__error-icon {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 27px;
+  }
+
+
   &__input {
     box-sizing: border-box;
     width: 100%;
