@@ -2,6 +2,9 @@
       layout
  ----------------------------*/
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   width: 100vw;
   background-color: $red;
@@ -9,16 +12,13 @@ body {
 
   @media only screen and (min-width: 1440px) {
     background-image: url(../images/bg-intro-desktop.png);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
 .page-wrapper {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  margin: 5.75rem auto 4.25rem;
   padding: 0 1.5rem;
   max-width: 37.5rem;
 
