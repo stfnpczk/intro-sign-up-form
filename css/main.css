@@ -369,7 +369,7 @@ typography
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   overflow-x: hidden;
 }
 
@@ -514,7 +514,6 @@ body {
 @media only screen and (min-width: 1440px) {
   .form__form-container {
     padding: 2.5rem;
-    height: 24.625rem;
   }
 }
 
