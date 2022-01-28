@@ -9,6 +9,9 @@ body {
 
   @media only screen and (min-width: 1440px) {
     background-image: url(../images/bg-intro-desktop.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -17,11 +20,11 @@ body {
   flex-direction: column;
   margin: 92px auto 68px;
   padding: 0 24px;
-  max-width: 500px;
+  max-width: 600px;
 
   @media only screen and (min-width: 1440px) {
     flex-direction: row;
-    margin: 121px auto 121;
+    margin: 0;
     padding: 0 165px;
     max-width: 1440px;
     gap: 45px;
@@ -60,7 +63,7 @@ body {
     margin: 16px 0 64px;
 
     @media only screen and (min-width: 1440px) {
-      margin: 11px 0 0;
+      margin: 32px 0 0;
     }
   }
 }
@@ -97,20 +100,22 @@ body {
     border-radius: 10px;
     margin: 24px 0 0;
     padding: 24px;
+    box-shadow: 0px 8px 0px hsla(0,0,0, 0.15);
 
     @media only screen and (min-width: 1440px) {
       padding: 40px;
+      height: 394px;
     }
   }
 
 
   &__input-container {
     position: relative;
+    margin: 0 0 20px;
   }
 
   &__input-container.error input {
     border-color: $red;
-    // margin: 0 0 19px;
     color: $red;
   }
   
@@ -121,7 +126,6 @@ body {
     line-height: 16.5px;
     font-weight: 500;
     color: $red;
-    margin: 0 0 19px;
   }
     
   &__input-container.error &__error-message {
@@ -130,12 +134,13 @@ body {
   
   &__input-container &__error-icon {
     display: none;
+    margin: 6px 0 0;
   }
   
   &__input-container.error  &__error-icon {
     display: block;
     position: absolute;
-    top: 16px;
+    top: 11px;
     right: 27px;
   }
 
@@ -149,7 +154,6 @@ body {
     line-height: 26px;
     font-weight: 600;
     border-radius: 5px;
-    margin: 0 0 16px;
     padding: 14px 20px;
   }
 
@@ -159,13 +163,20 @@ body {
     color: $white;
     border-radius: 5px;
     border: none;
-    padding: 15px 45px;
+    padding: 15px 0;
     font-size: 15px;
     line-height: 26px;
     font-weight: 600;
     letter-spacing: 1px;
     text-align: center;
+    text-transform: uppercase;
     box-shadow: 0px 4px 0px #38bf81;
+  }
+
+  &__button:hover {
+    background-color: hsla(154, 65%, 68%, 1);
+    box-shadow: 0px 4px 0px #77cca5;
+
   }
 
   &__terms {
@@ -175,6 +186,12 @@ body {
     text-align: center;
     color: $gray-blue;
     margin: 8px auto 0;
+    
+    @media only screen and (min-width: 1440px) {
+      max-width: 367px;
+      line-height: 26px;
+      margin: 15px auto 0;
+    }
   }
 
   &__link {
