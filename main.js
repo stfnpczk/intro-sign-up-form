@@ -6,8 +6,6 @@ const password = document.getElementById("password");
 
 const nodeList = [firstName, lastName, email, password];
 
-
-
 /*--------------------------------------------------
 preliminary helper functions for event listener
 ----------------------------------------------------*/
@@ -25,8 +23,9 @@ const isEmpty = (inputArray) => {
 };
 
 const checkEmail = (input) => {
-  const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  
+  const regex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   if (!regex.test(input.value)) {
     displayError(input, "Looks like this is not an email");
   }
@@ -44,12 +43,10 @@ const removeError = (input) => {
   inputContainer.classList.remove("error");
 };
 
-
-
 /*----------------------------
       event listeners
 ----------------------------*/
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   isEmpty(nodeList);
