@@ -11,8 +11,8 @@ preliminary helper functions for event listener
 ----------------------------------------------------*/
 
 // Check inputs are filled out
-const isEmpty = (inputArray) => {
-  inputArray.forEach((input) => {
+const isEmpty = (nodelist) => {
+  nodelist.forEach((input) => {
     if (!input.value) {
       displayError(
         input,
